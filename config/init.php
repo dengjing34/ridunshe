@@ -8,7 +8,7 @@ define('DEFAULT_METHOD', 'index');
 define('CONTROLLER_DIR', BASEDIR . 'controller/');
 define('BASEURL', isset($_SERVER['HTTP_HOST']) ? 'http://' . $_SERVER['HTTP_HOST'] . '/' : '/');
 define('UPLOAD_PATH', '/upload/');
-define('UPLOAD_URL', BASEURL . ltrim(UPLOAD_PATH));
+define('UPLOAD_URL', BASEURL . ltrim(UPLOAD_PATH, '/'));
 set_include_path(get_include_path() . PATH_SEPARATOR . BASEDIR . 'lib/');
 
 function __autoload($className) {

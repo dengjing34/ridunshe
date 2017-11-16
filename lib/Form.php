@@ -145,7 +145,7 @@ class Form {
                     if (isset($val['resizable']) && $val['resizable'] == true) $uploadParams['resizable'] = 1;
                     if (isset($val['watermark'])) $uploadParams['watermark'] = $val['watermark'];
                     $uploadUrl = !empty($uploadParams) ? Url::siteUrl('file/form?' . http_build_query($uploadParams)) :  Url::siteUrl('file/form');                                        
-                    $uploadBtn = "<iframe onload=\"var data = this.contentWindow.document.body.innerHTML;if(/^{(.)err(.):(.*),(.)msg(.):(.*)}$/.test(data)){var json = $.parseJSON(data);if(json['err'] != ''){alert(json['err']);}else{ $('#{$key}').val(json['msg']['dbPath']);}history.go(-1);}\" style=\"margin:0;padding:0;vertical-align:middle;\" frameborder=\"0\" width=\"300\" height=\"30\" scrolling=\"no\"  src=\"{$uploadUrl}\"></iframe>";
+                    $uploadBtn = "<iframe onload=\"var data = this.contentWindow.document.body.innerHTML;if(/^{(.)err(.):(.*),(.)msg(.):(.*)}$/.test(data)){var json = $.parseJSON(data);if(json['err'] != ''){alert(json['err']);}else{ $('#{$key}').val(json['msg']['dbPath']);}history.go(-1);}\" style=\"margin:0;padding:0;vertical-align:middle;\" frameborder=\"0\" width=\"302\" height=\"30\" scrolling=\"no\"  src=\"{$uploadUrl}\"></iframe>";
                     $input = "<input type=\"text\" name=\"{$key}\" id=\"{$key}\" value=\"{$inputValue}\" {$size} />" . $uploadBtn;
                     break;
                 default :
