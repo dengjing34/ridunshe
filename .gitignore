@@ -1,8 +1,13 @@
 Vendor
 nbproject
 composer.lock
-Config/*
-!Config/*.schema.php
+config/*
+!config/*.sample.php
+!config/init.php
 logs
 /nbproject/private/
 .idea/*
+cache/*
+!cache/.keep
+upload/*
+!upload/.keep
