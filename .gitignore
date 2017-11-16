@@ -1,0 +1,8 @@
+Vendor
+nbproject
+composer.lock
+Config/*
+!Config/*.schema.php
+logs
+/nbproject/private/
+.idea/*
