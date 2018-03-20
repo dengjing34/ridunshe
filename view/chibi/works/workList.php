@@ -44,7 +44,7 @@ if (empty($objs)) {
         $dataList .= "<td>{$obj->sub_title}</td>";
         $dataList .= "<td>{$obj->category_zh}</td>";
         $dataList .= "<td>{$pic}</td>";
-        $dataList .= "<td>{$obj->sort}</td>";      
+        $dataList .= "<td>{$obj->sort}</td>";
         $dataList .= "<td>" . date('Y-m-d H:i:s', $obj->create_time) ."</td>";
         $dataList .= "<td>" . date('Y-m-d H:i:s', $obj->update_time) ."</td>";
         $dataList .= "</tr>";
