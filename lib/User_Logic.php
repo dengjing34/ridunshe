@@ -26,7 +26,7 @@ class User_Logic {
                 Cookie::set('_userId', $result[0]->id, 86400);
                 Cookie::set('_userRole', $result[0]->role, 86400);
                 Cookie::set('_userRoleId', $result[0]->roleId, 86400);
-                Cookie::set('_userAccess', $role->access, 86400);
+                Cookie::set('_userAccess', base64_encode($role->access), 86400);
                 $result = true;
             }
         } catch (Exception $e) {

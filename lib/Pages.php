@@ -1,14 +1,26 @@
 <?php
 //dengjing34@vip.qq.com
 class Pages extends Data {
-    public $id, $name, $englishName, $content, $createdTime, $updatedTime, $attributeData;
+    public $id, $name, $englishName, $sort, $status, $content, $createdTime, $updatedTime, $attributeData;
+    const STATUS_ACTIVE = 1;
+    const STATUS_INACTIVE = 0;
+    public static $_status = array(
+        self::STATUS_ACTIVE => '有效',
+        self::STATUS_INACTIVE => '无效',
+    );
     public static $formFields = array(
         'name' => array(
-            'text' => '页面名称', 'required' => true, 'hint' => '尽量简单明了,不超过10个字,如"联系我们", "关于我们"之类', 'size' => 50, 'tip' => '不符合规范,必须填写页面名称'
+            'text' => '页面中文名称', 'required' => true, 'hint' => '尽量简单明了,不超过10个字,如"联系我们", "关于我们"之类', 'size' => 50, 'tip' => '不符合规范,必须填写页面名称'
         ),
         'englishName' => array(
-            'text' => '页面url名称', 'type' => 'select', 'required' => true, 'options' => array(),
-            'hint' => '页面Url名称,如 http://www.ridunshe.com/<span style="color:red;">contact</span> 中的contact', 'tip' => '请选择一个页面url',
+            'text' => '页面英文名称', 'required' => true,
+            'hint' => '页面英文名称,如 http://www.ridunshe.com/<span style="color:red;">contact</span> 中的contact', 'tip' => '请填写一个页面英文名',
+        ),
+        'sort' => array(
+            'text' => '排序', 'required' => true, 'rule' => "/^\d+$/", 'hint' => '排序,数值越大越靠前', 'size' => 10, 'tip' => '请输入一个数字',
+        ),
+        'status' => array(
+            'text' => '状态', 'required'=> true, 'type' => 'select', 'tip' => '请选择状态',
         ),
         'content' => array(
             'text' => '页面内容', 'type' => 'ckeditor', 'width' => 980, 'height' => 200, 'hint' => '简短的文字介绍,非必填', 'toolbar' => 'Full',
@@ -22,6 +34,8 @@ class Pages extends Data {
                 'id' => 'id',
                 'name' => 'name',
                 'englishName' => 'english_name',
+                'sort' => 'sort',
+                'status' => 'status',
                 'content' => 'content',
                 'createdTime' => 'createdTime',
                 'updatedTime' => 'updatedTime',

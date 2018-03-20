@@ -55,7 +55,7 @@ class Chibi_Controller extends Controller {
     }
 
     private function validateAccess() {
-        $userAccess = explode(',', $this->_userAccess);
+        $userAccess = explode(',', base64_decode($this->_userAccess));
         $access = new Access();
         $allAccess = $access->getAccessTree();
         $accessPath = "{$this->controllerName}/{$this->methodName}";

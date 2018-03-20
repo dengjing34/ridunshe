@@ -19,7 +19,7 @@ class Main_Controller extends Chibi_Controller {
     function quit() {
         $userLogic = new User_Logic();
         $userLogic->quit();
-        Url::redirect('chibi');
+        Url::redirect(Url::siteUrl('chibi'));
     }
 
     function userPassword() {
