@@ -58,7 +58,7 @@ class Work extends Data {
             'text' => '分类', 'required' => true, 'type' => 'select', 'options' => array(), 'hint' => '作品所属的类别', 'tip' => '请选择分类',
         ),
         'content' => array(
-            'text' => '详细介绍', 'type' => 'ckeditor', 'required' => true, 'tip' => '详细介绍必填',
+            'text' => '详细介绍', 'type' => 'ckeditor', 'required' => true, 'tip' => '详细介绍必填', 'height' => '500',
         ),
         'sort' => array(
             'text' => '排序', 'required' => true, 'rule' => "/^\d+$/", 'hint' => '排序,数值越大越靠前', 'size' => 10, 'tip' => '请输入一个数字',

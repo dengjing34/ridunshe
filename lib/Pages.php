@@ -23,7 +23,7 @@ class Pages extends Data {
             'text' => '状态', 'required'=> true, 'type' => 'select', 'tip' => '请选择状态',
         ),
         'content' => array(
-            'text' => '页面内容', 'type' => 'ckeditor', 'width' => 980, 'height' => 200, 'hint' => '简短的文字介绍,非必填', 'toolbar' => 'Full',
+            'text' => '页面内容', 'type' => 'ckeditor', 'width' => 980, 'height' => 500, 'hint' => '简短的文字介绍,非必填', 'toolbar' => 'Full',
         ),
     );
     function __construct() {
