@@ -68,13 +68,13 @@ class News_Controller extends Chibi_Controller{
     
     function newsModify() {
         $id = $this->url->get('id');
-        $o = new news();
+        $o = new News();
         try {
             $o->load($id);
         } catch (Exception $e) {
             $this->_error($e->getMessage());return;
         }
-        $form = new Form(news::$formFields);
+        $form = new Form(News::$formFields);
         $form->assign($o);
         if ($this->url->post('submit')) {
             $validateResult = $form->validatePost();
