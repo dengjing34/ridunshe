@@ -11,7 +11,7 @@ return array(
     ),    
     'about' => array(
         'text' => '我们',
-        'url' => 'about',
+        'url' => 'aboutus',
         'pages' => true,//单独页面
     ),
     'news' => array(
@@ -33,7 +33,7 @@ return array(
 //        'pages' => true,
 //    ),
     'contact' => array(
-        'url' => 'contact',
+        'url' => 'contactus',
         'text' => '联系',
         'pages' => true,
     ),
