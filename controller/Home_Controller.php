@@ -37,7 +37,7 @@ class Home_Controller extends Controller{
         $view->render(true);
     }
     
-    function about() {
+    function aboutus() {
         $this->render(Pages::render(__FUNCTION__));  
     }
     
@@ -49,7 +49,7 @@ class Home_Controller extends Controller{
         $this->render(Pages::render(__FUNCTION__));
     }
     
-    function contact() {
+    function contactus() {
         $this->render(Pages::render(__FUNCTION__));
     }
 
