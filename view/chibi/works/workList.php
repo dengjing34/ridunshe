@@ -24,7 +24,6 @@ $emptyMsg = $dataList = '';
             <td><input type="checkbox" name="selectAll" id="selecteAll" onclick="$('input[name=id[]]').attr('checked', $(this).attr('checked'));" />ID</td>
             <td>操作</td>
             <td>名称</td>
-            <td>副标题</td>
             <td>分类</td>
             <td>首页滚动图片</td>
             <td>首页滚动图片排序</td>
@@ -47,7 +46,6 @@ if (empty($objs)) {
         $dataList .= "<td><input type=\"checkbox\" name=\"id[]\" value=\"{$obj->id}\" />{$obj->id}</td>";
         $dataList .= "<td><a class=\"button button-orange\" href=\"" . Url::siteUrl("chibi/{$controller}/{$controller}Modify?id={$obj->id}")  . "\"><span class=\"pencil\"></span>编辑</a></td>";
         $dataList .= "<td><a href=\"" . Url::siteUrl("chibi/{$controller}/{$controller}Modify?id={$obj->id}") . "\">{$obj->title}</a></td>";
-        $dataList .= "<td>{$obj->sub_title}</td>";
         $dataList .= "<td>{$obj->category_zh}</td>";
         $dataList .= "<td>{$banner_pic}</td>";
         $dataList .= "<td>{$obj->banner_sort}</td>";
